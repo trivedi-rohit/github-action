@@ -1,6 +1,7 @@
 name: CICD
 # continous delivery
 on:
+# When user runs, manual click (deliver) workflow.
   workflow_dispatch:
 
 jobs:
