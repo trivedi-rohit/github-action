@@ -11,7 +11,7 @@ on:
       #- '**.css'
     inputs:
       environment:
-        description: This is the env value where thsi workflow runs
+        description: This is the env. value where this workflow runs
         default: 'dev'
         required: true
         type: choice
