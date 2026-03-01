@@ -3,8 +3,9 @@ name: Hello
 
 # runs on trigger
 on:
-  push:   
-    branches: [main]
+  workflow_dispatch:     # will run on trigger
+  # push:                # Automated
+    # branches: [main]
     
 # these are jobs inside the workflow
 jobs:
