@@ -4,6 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
+# Parellelism - every jobs need seprate runner.
   code:
     runs-on: ubuntu-latest
     
@@ -18,12 +19,14 @@ jobs:
           run: echo "Docker Container build
   
   test:
+        needs: build
         runs-on: ubuntu-latest
         steps:
           - name: Test the container
             run: echo "Testing the container" 
 
   deploy:
+    needs: [test, build]
     runs-on: ubuntu-latest
     steps:
       - name: Deploying the app
