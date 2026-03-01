@@ -8,6 +8,7 @@ on:
     
 # these are jobs inside the workflow
 jobs:
+  
   greet:
   # github runnner, each jobs runs on runner
     runs-on: ubuntu-latest                  
@@ -17,7 +18,12 @@ jobs:
 
       - name: say hello to username
         run: echo "Hellow $user"
-      
+  
+  details:
+    runs-on: ubuntu-latest
+    steps:
+      - name: version of python, etc
+        run: docker --version && python --version
 
       
   
