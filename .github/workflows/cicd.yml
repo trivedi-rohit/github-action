@@ -16,7 +16,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - name: Build Docker container
-          run: echo "Docker Container build
+          run: echo "Docker Container build"
   
   test:
         needs: build
